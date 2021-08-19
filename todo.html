@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="getUser()">
+    <div class="userInfo">
+        <h1 id="email"></h1>
+        <h1 id="username"></h1>
+    </div>
+    <button onclick="signout()">log Out</button>
+    <div class="todoapp">
+        <h1 class="todoH"> TODO APPLICATION </h1>
+        <h1 id="welcome">  </h1>
+        <div class="input">
+            <input type="text" id="input" placeholder="Enter what to do ">
+            <button class="add_btn" onclick="add()"> ADD ITEM </button>
+            <button class="deletelbtn" onclick="delAll(this)"> DELETE ALL </button>
+        </div>
+        <ul id = "list">
+        </ul>
+    </div>
+    <script src="app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBHcpxfvL15iYoD4YziHx3y-Nf8KQJZdCQ",
+    authDomain: "todoapplication-e91d1.firebaseapp.com",
+    projectId: "todoapplication-e91d1",
+    storageBucket: "todoapplication-e91d1.appspot.com",
+    messagingSenderId: "84400573472",
+    appId: "1:84400573472:web:9cb1423b9599b94d090045"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</body>
+</html>
